@@ -1,0 +1,34 @@
+Завдання 1
+Це не можливо, так як ці функції завжди створюють різні об'єкти.
+
+Завдання 2 
+
+function Calculator()
+{
+  this.a = 0
+  this.b = 0
+  this.read = () => 
+  {
+       this.a = +prompt('Enter a:')
+       this.b = +prompt('Enter b:')
+  }
+  this.sum = () => 
+  {
+    return this.a + this.b
+  }
+  this.mul = () => 
+  {
+    return this.a * this.b
+  }
+}
+ 
+Завдання 3
+
+function f1(startingValue) 
+{
+  this.value = startingValue
+  this.read = () => 
+  {
+    this.value = +prompt('Enter value:')
+  }
+}
