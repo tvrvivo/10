@@ -1,0 +1,38 @@
+Завдання 1
+
+function Sum() {
+    let array = [];
+    while (true) {
+        let value = prompt("Число:", 0);
+        if (value === "" || value === null || !isFinite(value)) break;
+        array.push(+value);
+    }
+    let sum = 0;
+    for (let num of array) {
+      sum += num;
+    }
+    return sum;
+  }
+  alert( Sum() );
+
+Завдання 2
+
+function getMaxSubSum(arr) {
+    let maxSum = 0; 
+  
+    for (let i = 0; i < arr.length; i++) {
+      let sumFixedStart = 0;
+      for (let j = i; j < arr.length; j++) {
+        sumFixedStart += arr[j];
+        maxSum = Math.max(maxSum, sumFixedStart);
+      }
+    }
+  
+    return maxSum;
+  }
+  
+  alert( getMaxSubSum([6, -2, 7, -9]) ); 
+  alert( getMaxSubSum([5, -6, 3, 9, 11]) ); 
+  alert( getMaxSubSum([-2, -9, 7, 2]) );
+  alert( getMaxSubSum([1, -7, 3]) ); 
+  alert( getMaxSubSum([25, 20, -30, 15, 5]) ); 
